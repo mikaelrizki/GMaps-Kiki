@@ -9,6 +9,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from env import URL
 import time
+from datetime import datetime, timedelta
 
 def data_lokasi():
     print("Function Level : Pencarian Data Lokasi")
@@ -17,14 +18,18 @@ def data_lokasi():
     jumlah_ulasan = driver.find_element(By.XPATH, "//div[@class='jANrlb']/div[@class='fontBodySmall']")
     print("\t (i) Berhasil menemukan data lokasi.")
     print("\t (d) Data angka rating pada lokasi  :", angka_rating.text)
-    print("\t (d) Data jumlah ulasan pada lokasi :", jumlah_ulasan.text, "\n")
+    print("\t (d) Data jumlah ulasan pada lokasi :", jumlah_ulasan.text)
+    nama_lokasi = input("\t (a) Masukkan Nama Lokasi : ")
+    link_lokasi = input("\t (a) Masukkan Link Lokasi : ")
+    print()
+    dict_data_lokasi = dict(nama_lokasi = nama_lokasi, link_lokasi = link_lokasi, angka_rating = angka_rating.text, jumlah_ulasan = jumlah_ulasan.text)
 
     '''
     Data dalam bentuk list
     [0] -> Angka Rating Bintang dengan range (1,0 - 5,0)
     [1] -> Jumlah Ulasan pada lokasi
     '''
-    return [str(angka_rating.text), str(jumlah_ulasan.text)]
+    return dict_data_lokasi
 
 def filter_ulasan():
     print("Function Level : Filter Ulasan Terbaru")
@@ -79,7 +84,7 @@ def expand_ulasan():
     for button in buttons:
         button.click()
     
-def ambil_ulasan():
+def ambil_ulasan(data_lokasi):
     '''
     Data Ulasan Google Maps
     Dalam bentuk list yang setiap itemnya berisikan satu buah data dictionary
@@ -139,7 +144,33 @@ def ambil_ulasan():
             data3 = i.find_element(By.CSS_SELECTOR, "span.kvMYJc")
             rating_ulasan = data3.get_attribute("aria-label")
             
-            dict_data_ulasan = dict(isi_ulasan = isi_ulasan, informasi_ulasan = informasi_ulasan, rating_ulasan = rating_ulasan)
+            data4 = i.find_element(By.CSS_SELECTOR, "span.rsqaWe")
+            raw_waktu = data4.text
+            current_date = datetime.now()
+            
+            time_mapping = {
+                "seminggu lalu": timedelta(weeks=1),
+                "2 minggu lalu": timedelta(weeks=2),
+                "3 minggu lalu": timedelta(weeks=3),
+                "4 minggu lalu": timedelta(weeks=4),
+                "sebulan lalu": timedelta(days=30),
+                "2 bulan lalu": timedelta(days=60),
+                "3 bulan lalu": timedelta(days=90),
+                "4 bulan lalu": timedelta(days=120),
+                "5 bulan lalu": timedelta(days=150),
+                "6 bulan lalu": timedelta(days=180),
+                "7 bulan lalu": timedelta(days=210),
+                "8 bulan lalu": timedelta(days=240),
+                "9 bulan lalu": timedelta(days=270),
+                "10 bulan lalu": timedelta(days=300),
+                "11 bulan lalu": timedelta(days=330),
+                "setahun lalu": timedelta(days=365),
+                "2 tahun lalu": timedelta(days=730)
+            }
+            
+            waktu_ulasan = current_date - time_mapping[raw_waktu]
+            
+            dict_data_ulasan = dict(isi_ulasan = isi_ulasan, informasi_ulasan = informasi_ulasan, waktu_ulasan = waktu_ulasan.strftime("%Y-%m-%d"), rating_ulasan = rating_ulasan)
             data_ulasan2.append(dict_data_ulasan)
         counter += 1
     
@@ -152,8 +183,13 @@ def ambil_ulasan():
         merged_dict = {**dict1, **dict2}
         data.append(merged_dict)
     print("\t (i) Berhasil menggabungkan data ulasan reviewer sebanyak " + str(len(data)) + ".\n")
-        
-    return data
+    
+    new_data = []
+    for data_dict in data:
+        new_dict = {**data_lokasi, **data_dict}
+        new_data.append(new_dict)
+    
+    return new_data
 
 def upload(data):
     print("Function Level: Upload Data ke SpreadSheet")
@@ -161,7 +197,7 @@ def upload(data):
     credentials = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
     gc = gspread.authorize(credentials)
     spreadsheet = gc.open("[Result] Data Ulasan Google Maps")
-    worksheet = spreadsheet.worksheet("Sheet1")
+    worksheet = spreadsheet.worksheet("Sheet2")
     print("\t (a) Opening Spreadsheet:", spreadsheet.title)
     print("\t (a) Opening Worksheet:", worksheet.title)
 
@@ -187,13 +223,13 @@ if __name__ == "__main__":
     driver.get(URL)
 
     try:
-        data_lokasi()
+        data_lokasi = data_lokasi()
         filter_ulasan()
         scroll_ulasan()
         expand_ulasan()
-        data = ambil_ulasan()
+        data = ambil_ulasan(data_lokasi)
         upload(data)
-        input()
+        input("\t (a) Tekan key apapun untuk keluar! ")
     except Exception as e:
         print(f"An error occurred: {e}")
 
