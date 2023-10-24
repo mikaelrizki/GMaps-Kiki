@@ -23,7 +23,6 @@ def data_lokasi():
     link_lokasi = input("\t (a) Masukkan Link Lokasi : ")
     print()
     dict_data_lokasi = dict(nama_lokasi = nama_lokasi, link_lokasi = link_lokasi, angka_rating = angka_rating.text, jumlah_ulasan = jumlah_ulasan.text)
-
     '''
     Data dalam bentuk list
     [0] -> Angka Rating Bintang dengan range (1,0 - 5,0)
