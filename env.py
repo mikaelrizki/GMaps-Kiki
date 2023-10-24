@@ -1,1 +1,1 @@
-URL = "https://www.google.com/maps/place/Taman+Kuliner+Condongcatur/@-7.7554018,110.3918903,17z/data=!4m8!3m7!1s0x2e7a59185eebafe1:0xcf8586a4478bda1d!8m2!3d-7.7554018!4d110.3944652!9m1!1b1!16s%2Fg%2F11s8g1yspn?entry=ttu"
+URL = "https://www.google.com/maps/place/Pantai+Depok/@-8.0144548,110.2881249,16z/data=!4m18!1m9!3m8!1s0x2e7b00fba767763f:0xf91573c5c20eb944!2sPantai+Depok!8m2!3d-8.0137087!4d110.2914777!9m1!1b1!16s%2Fg%2F11jgdxqv_!3m7!1s0x2e7b00fba767763f:0xf91573c5c20eb944!8m2!3d-8.0137087!4d110.2914777!9m1!1b1!16s%2Fg%2F11jgdxqv_?entry=ttu"

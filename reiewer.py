@@ -168,9 +168,13 @@ def ambil_ulasan(data_lokasi):
                 "2 tahun lalu": timedelta(days=730)
             }
             
-            waktu_ulasan = current_date - time_mapping[raw_waktu]
+            try:
+                waktu_ulasan = current_date - time_mapping[raw_waktu]
+                waktu_ulasan = waktu_ulasan.strftime("%Y-%m-%d")
+            except:
+                waktu_ulasan = raw_waktu
             
-            dict_data_ulasan = dict(isi_ulasan = isi_ulasan, informasi_ulasan = informasi_ulasan, waktu_ulasan = waktu_ulasan.strftime("%Y-%m-%d"), rating_ulasan = rating_ulasan)
+            dict_data_ulasan = dict(isi_ulasan = isi_ulasan, informasi_ulasan = informasi_ulasan, waktu_ulasan = waktu_ulasan, rating_ulasan = rating_ulasan)
             data_ulasan2.append(dict_data_ulasan)
         counter += 1
     
@@ -224,7 +228,7 @@ if __name__ == "__main__":
 
     try:
         data_lokasi = data_lokasi()
-        filter_ulasan()
+        # filter_ulasan()
         scroll_ulasan()
         expand_ulasan()
         data = ambil_ulasan(data_lokasi)
