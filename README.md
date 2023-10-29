@@ -37,9 +37,9 @@ URL = [
 ]
 ```
 *Penjelasan :*
-- COLLECTOR_NAME : Sebagai nama collector dari hasil review yang diperoleh
-- CREDENTIALS_FILE : Merujuk sebagai nama file kredensial dari API Google
-- URL : Berisikan list dari URL POI Google Maps, dapat berisikan 1 atau lebih
+- **COLLECTOR_NAME** : Sebagai nama collector dari hasil review yang diperoleh
+- **CREDENTIALS_FILE** : Merujuk sebagai nama file kredensial dari API Google
+- **URL** : Berisikan list dari URL POI Google Maps, dapat berisikan 1 atau lebih
 
 **3. Install library yang diperlukan**
 
