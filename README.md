@@ -87,7 +87,7 @@ options.add_experimental_option('prefs', {'profile.managed_default_content_setti
 
 - Tahap 6 : Collect data ulasan dilakukan secara otomatis, silahkan tunggu hingga informasi expand ulasan berhasil dilakukan.
 
-  ![image](https://github.com/mikaelrizki/GMaps-Scrapper/assets/103487218/9794084f-a821-4e32-a181-30816c46132a)
+  ![image](https://github.com/mikaelrizki/GMaps-Scrapper/assets/103487218/71e9e6ef-b6ec-4b30-a91b-3d339025d023)
 
 - Tahap 7 : Upload data ke Google SpreadSheet akan dilakukan secara otomatis, silahkan lakukan penyesuaian lokasi file pada :
   ```
