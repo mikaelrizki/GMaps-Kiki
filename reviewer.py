@@ -7,27 +7,43 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-from env import URL
+from env import COLLECTOR_NAME, CREDENTIALS_FILE, URL
 import time
 from datetime import datetime, timedelta
 
-def data_lokasi():
+def data_lokasi(url):
     print("Function Level : Pencarian Data Lokasi")
     # Informasi terkait lokasi yang ingin didapatkan
-    angka_rating = driver.find_element(By.XPATH, "//div[@class='jANrlb']/div[@class='fontDisplayLarge']")
-    jumlah_ulasan = driver.find_element(By.XPATH, "//div[@class='jANrlb']/div[@class='fontBodySmall']")
+    nama_lokasi = driver.find_element(By.CLASS_NAME, "DUwDvf")
+    nama_lokasi = nama_lokasi.text
     print("\t (i) Berhasil menemukan data lokasi.")
-    print("\t (d) Data angka rating pada lokasi  :", angka_rating.text)
-    print("\t (d) Data jumlah ulasan pada lokasi :", jumlah_ulasan.text)
-    nama_lokasi = input("\t (a) Masukkan Nama Lokasi : ")
-    link_lokasi = input("\t (a) Masukkan Link Lokasi : ")
-    print()
-    dict_data_lokasi = dict(nama_lokasi = nama_lokasi, link_lokasi = link_lokasi, angka_rating = angka_rating.text, jumlah_ulasan = jumlah_ulasan.text)
+    print("\t (d) Nama lokasi  :", nama_lokasi)
+    print("\t (d) Link lokasi  :", url)
+    
+    buttons = driver.find_elements(By.XPATH, "//div[@class='RWPxGd']//button")
+    
+    # Melakukan aksi penekanan pada tombol "Ulasan"
+    ulasan_button = buttons[1]
+    ulasan_button.click()
+    print("\t (a) Menekan tombol Ulasan!")
+    
+    angka_rating = driver.find_element(By.XPATH, "//div[@class='jANrlb']/div[@class='fontDisplayLarge']")
+    angka_rating = angka_rating.text
+    angka_rating = angka_rating.replace(",", ".")
+    jumlah_ulasan = driver.find_element(By.XPATH, "//div[@class='jANrlb']/div[@class='fontBodySmall']")
+    jumlah_ulasan = jumlah_ulasan.text
+    jumlah_ulasan = jumlah_ulasan.replace(" ulasan", "")
+    
+    print("\t (d) Data angka rating pada lokasi  :", angka_rating)
+    print("\t (d) Data jumlah ulasan pada lokasi :", jumlah_ulasan, "\n")
+
+    dict_data_lokasi = dict(nama_lokasi = nama_lokasi, link_lokasi = url, angka_rating = angka_rating, jumlah_ulasan = jumlah_ulasan)
     '''
     Data dalam bentuk list
     [0] -> Angka Rating Bintang dengan range (1,0 - 5,0)
     [1] -> Jumlah Ulasan pada lokasi
     '''
+
     return dict_data_lokasi
 
 def filter_ulasan():
@@ -53,6 +69,11 @@ def filter_ulasan():
     else:
         return False
 
+def custom_filter_ulasan():
+    print("Function Level : Filter Ulasan")
+    print("\t (i) Lakukan pemilihan filter secara manual pada Browser yang terbuka.")
+    input("\t (a) Tekan key apa saja untuk melanjutkan program!")
+    print()
 
 def scroll_ulasan():
     print("Function Level : Scroll Ulasan")
@@ -60,30 +81,19 @@ def scroll_ulasan():
     print("\t (i) Lakukan scrolling manual pada Browser yang terbuka.")
     input("\t (a) Tekan key apa saja untuk melanjutkan program!")
     print()
-    # lXJj5c Hk4XGb
-    # scrollable_div = driver.find_element(By.XPATH, '//div[@class="qjESne"]')
-    # for _ in range(12):
-    #     driver.execute_script(
-    #         'arguments[0].scrollTop = arguments[0].scrollHeight',
-    #         scrollable_div
-    #     )
-    #     time.sleep(3)
-    # driver.execute_script("arguments[0].scrollIntoView();", element)
-    # driver.execute_script("window.scrollTo(0, arguments[0].getBoundingClientRect().top);", driver.find_elements(By.CSS_SELECTOR, "div.qjESne"))
+    # Element Scroll : lXJj5c Hk4XGb
+    # Cek Jumlah Review : d4r55
 
 def expand_ulasan():
     print("Function Level : Expand Ulasan")
-    print("\t (i) Waktu tunggu element diatur selama lima detik.")
-    time.sleep(5)
-    
     print("\t (i) Berhasil menemukan seluruh tombol 'Read More'.")
     buttons = driver.find_elements(By.CSS_SELECTOR, "button.w8nwRe.kyuRq")
     
     print("\t (a) Menekan", len(buttons), "option menu 'Read More'!\n")
     for button in buttons:
         button.click()
-    
-def ambil_ulasan(data_lokasi):
+
+def ambil_ulasan(data_lokasi, collector_name):
     '''
     Data Ulasan Google Maps
     Dalam bentuk list yang setiap itemnya berisikan satu buah data dictionary
@@ -142,30 +152,34 @@ def ambil_ulasan(data_lokasi):
             
             data3 = i.find_element(By.CSS_SELECTOR, "span.kvMYJc")
             rating_ulasan = data3.get_attribute("aria-label")
+            rating_ulasan = rating_ulasan.replace(" bintang", "")
             
             data4 = i.find_element(By.CSS_SELECTOR, "span.rsqaWe")
             raw_waktu = data4.text
             current_date = datetime.now()
             
-            time_mapping = {
-                "seminggu lalu": timedelta(weeks=1),
-                "2 minggu lalu": timedelta(weeks=2),
-                "3 minggu lalu": timedelta(weeks=3),
-                "4 minggu lalu": timedelta(weeks=4),
-                "sebulan lalu": timedelta(days=30),
-                "2 bulan lalu": timedelta(days=60),
-                "3 bulan lalu": timedelta(days=90),
-                "4 bulan lalu": timedelta(days=120),
-                "5 bulan lalu": timedelta(days=150),
-                "6 bulan lalu": timedelta(days=180),
-                "7 bulan lalu": timedelta(days=210),
-                "8 bulan lalu": timedelta(days=240),
-                "9 bulan lalu": timedelta(days=270),
-                "10 bulan lalu": timedelta(days=300),
-                "11 bulan lalu": timedelta(days=330),
-                "setahun lalu": timedelta(days=365),
-                "2 tahun lalu": timedelta(days=730)
-            }
+            time_mapping = dict()
+            
+            for i in range(1, 60):
+                time_mapping[f"{i} menit lalu"] = timedelta(minutes=i)
+            
+            for i in range(1, 24):
+                time_mapping[f"{i} jam lalu"] = timedelta(hours=i)
+            
+            for i in range(1, 32):
+                time_mapping[f"{i} hari lalu"] = timedelta(days=i)
+            
+            time_mapping["seminggu lalu"] = timedelta(weeks=1)
+            for i in range(1, 5):
+                time_mapping[f"{i} minggu lalu"] = timedelta(weeks=i)
+            
+            time_mapping["sebulan lalu"] = timedelta(days=30)
+            for i in range(1, 13):
+                time_mapping[f"{i} bulan lalu"] = timedelta(days=i*30)
+            
+            time_mapping["setahun lalu"] = timedelta(days=365)
+            for i in range(1, 13):
+                time_mapping[f"{i} tahun lalu"] = timedelta(days=i*365)
             
             try:
                 waktu_ulasan = current_date - time_mapping[raw_waktu]
@@ -173,7 +187,7 @@ def ambil_ulasan(data_lokasi):
             except:
                 waktu_ulasan = raw_waktu
             
-            dict_data_ulasan = dict(isi_ulasan = isi_ulasan, informasi_ulasan = informasi_ulasan, waktu_ulasan = waktu_ulasan, rating_ulasan = rating_ulasan)
+            dict_data_ulasan = dict(isi_ulasan = isi_ulasan, informasi_ulasan = informasi_ulasan, waktu_ulasan = waktu_ulasan, rating_ulasan = rating_ulasan, collector = collector_name)
             data_ulasan2.append(dict_data_ulasan)
         counter += 1
     
@@ -194,13 +208,13 @@ def ambil_ulasan(data_lokasi):
     
     return new_data
 
-def upload(data):
+def upload(data, credentials_file):
     print("Function Level: Upload Data ke SpreadSheet")
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    credentials = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(credentials_file, scope)
     gc = gspread.authorize(credentials)
     spreadsheet = gc.open("[Result] Data Ulasan Google Maps")
-    worksheet = spreadsheet.worksheet("Sheet2")
+    worksheet = spreadsheet.worksheet("Pantai")
     print("\t (a) Opening Spreadsheet:", spreadsheet.title)
     print("\t (a) Opening Worksheet:", worksheet.title)
 
@@ -218,23 +232,27 @@ if __name__ == "__main__":
     print('Mulai Program ...')
     
     # Instalasi Chrome Web Driver dan Load Browser 
-    options = Options()
+    options = webdriver.ChromeOptions()
     options.add_argument("start-maximized")
+    options.add_experimental_option('prefs', {'profile.managed_default_content_settings.images': 2})
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-    # Mengarahkan ke URL dari env
-    driver.get(URL)
+    for url in URL: 
+        # Mengarahkan ke URL dari env
+        driver.get(url)
 
-    try:
-        data_lokasi = data_lokasi()
-        # filter_ulasan()
-        scroll_ulasan()
-        expand_ulasan()
-        data = ambil_ulasan(data_lokasi)
-        upload(data)
-        input("\t (a) Tekan key apapun untuk keluar! ")
-    except Exception as e:
-        print(f"An error occurred: {e}")
+        try:
+            data_lokasi = data_lokasi(url)
+            # filter_ulasan()
+            custom_filter_ulasan()
+            scroll_ulasan()
+            expand_ulasan()
+            data = ambil_ulasan(data_lokasi, COLLECTOR_NAME)
+            upload(data, CREDENTIALS_FILE)
+            input("\t (a) Tekan key apapun untuk keluar! ")
+            print()
+        except Exception as e:
+            print(f"An error occurred: {e}")
 
     # Menutup Chrome Browser
     driver.quit()
