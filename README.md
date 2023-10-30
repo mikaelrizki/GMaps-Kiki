@@ -31,6 +31,8 @@ Berikut adalah struktur file .env yang akan digunakan :
 ```
 COLLECTOR_NAME = "Mikael Rizki"
 CREDENTIALS_FILE = "credentials-mikael.json"
+GSHEETS_NAME = "[Result] Data Ulasan Google Maps"
+WORKSHEET_NAME = "Temp" 
 URL = [
   "https://maps.app.goo.gl/RQQBBfd4aBtsMYH57",
   ... add more URL ...
@@ -39,6 +41,8 @@ URL = [
 *Penjelasan :*
 - **COLLECTOR_NAME** : Sebagai nama collector dari hasil review yang diperoleh
 - **CREDENTIALS_FILE** : Merujuk sebagai nama file kredensial dari API Google
+- **GSHEETS_NAME** : Merujuk pada nama file pada Google SpreadSheet
+- **WORKSHEET_NAME** = Merujuk pada worksheet dalam file Google SpreadSheet
 - **URL** : Berisikan list dari URL POI Google Maps, dapat berisikan 1 atau lebih
 
 **3. Install library yang diperlukan**
@@ -68,7 +72,7 @@ options.add_experimental_option('prefs', {'profile.managed_default_content_setti
 
   *Note : Pastikan link lokasi yang digunakan didapatkan dari menu share pada lokasi.*
 
-  ![Share](https://github.com/mikaelrizki/GMaps-Scrapper/assets/103487218/53517804-9b91-4507-8a85-38d2334bb583)
+  ![image](https://github.com/mikaelrizki/GMaps-Scrapper/assets/103487218/81511712-34be-4f53-8d9e-09ec6ae76a2d)
 
 - Tahap 3 : Filter ulasan dapat dilakukan menggunakan 2 cara :
   ```
