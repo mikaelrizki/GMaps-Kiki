@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-from env import COLLECTOR_NAME, CREDENTIALS_FILE, URL
+from env import COLLECTOR_NAME, CREDENTIALS_FILE, GSHEETS_NAME, WORKSHEET_NAME, URL
 import time
 from datetime import datetime, timedelta
 
@@ -72,7 +72,6 @@ def filter_ulasan():
 def custom_filter_ulasan():
     print("Function Level : Filter Ulasan")
     print("\t (i) Lakukan pemilihan filter secara manual pada Browser yang terbuka.")
-    input("\t (a) Tekan key apa saja untuk melanjutkan program!")
     print()
 
 def scroll_ulasan():
@@ -208,13 +207,13 @@ def ambil_ulasan(data_lokasi, collector_name):
     
     return new_data
 
-def upload(data, credentials_file):
+def upload(data, credentials_file, gsheets_name, worksheet_name):
     print("Function Level: Upload Data ke SpreadSheet")
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
     credentials = ServiceAccountCredentials.from_json_keyfile_name(credentials_file, scope)
     gc = gspread.authorize(credentials)
-    spreadsheet = gc.open("[Result] Data Ulasan Google Maps")
-    worksheet = spreadsheet.worksheet("Pantai")
+    spreadsheet = gc.open(gsheets_name)
+    worksheet = spreadsheet.worksheet(worksheet_name)
     print("\t (a) Opening Spreadsheet:", spreadsheet.title)
     print("\t (a) Opening Worksheet:", worksheet.title)
 
@@ -225,7 +224,6 @@ def upload(data, credentials_file):
     except Exception as e:
         print("\t (e) Error inserting data rows:", str(e))
     print("\t (i) Data uploaded successfully.")
-    
 
 if __name__ == "__main__":
     print('Google Maps Scraper oleh Mikael Rizki')
@@ -248,11 +246,18 @@ if __name__ == "__main__":
             scroll_ulasan()
             expand_ulasan()
             data = ambil_ulasan(data_lokasi, COLLECTOR_NAME)
-            upload(data, CREDENTIALS_FILE)
-            input("\t (a) Tekan key apapun untuk keluar! ")
-            print()
         except Exception as e:
             print(f"An error occurred: {e}")
 
+    cond = False
+    while cond != True:
+        try :
+            upload(data, CREDENTIALS_FILE, GSHEETS_NAME, WORKSHEET_NAME)
+            cond = True
+            input("\t (a) Tekan key apapun untuk keluar! ")
+        except:
+            print(f"\t An error occurred: {e}")
+
     # Menutup Chrome Browser
     driver.quit()
+    print()
