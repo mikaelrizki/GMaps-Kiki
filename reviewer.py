@@ -14,12 +14,13 @@ from datetime import datetime, timedelta
 def data_lokasi(url):
     print("Function Level : Pencarian Data Lokasi")
     # Informasi terkait lokasi yang ingin didapatkan
+    time.sleep(1)
     nama_lokasi = driver.find_element(By.CLASS_NAME, "DUwDvf")
     nama_lokasi = nama_lokasi.text
     print("\t (i) Berhasil menemukan data lokasi.")
     print("\t (d) Nama lokasi  :", nama_lokasi)
     print("\t (d) Link lokasi  :", url)
-    
+    time.sleep(1)
     buttons = driver.find_elements(By.XPATH, "//div[@class='RWPxGd']//button")
     
     # Melakukan aksi penekanan pada tombol "Ulasan"
@@ -109,8 +110,8 @@ def ambil_ulasan(data_lokasi, collector_name):
     data_ulasan = list()
     
     print("Function Level : Ambil Data Ulasan")
-    print("\t (i) Waktu tunggu element diatur selama lima detik.")
-    time.sleep(5)
+    print("\t (i) Waktu tunggu element diatur selama tiga detik.")
+    time.sleep(3)
     
     semua_data_reviewer = driver.find_elements(By.CSS_SELECTOR, "button.al6Kxe[data-review-id][data-href][jslog]")
     for data_reviewer in semua_data_reviewer:
@@ -208,22 +209,28 @@ def ambil_ulasan(data_lokasi, collector_name):
     return new_data
 
 def upload(data, credentials_file, gsheets_name, worksheet_name):
-    print("Function Level: Upload Data ke SpreadSheet")
-    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    credentials = ServiceAccountCredentials.from_json_keyfile_name(credentials_file, scope)
-    gc = gspread.authorize(credentials)
-    spreadsheet = gc.open(gsheets_name)
-    worksheet = spreadsheet.worksheet(worksheet_name)
-    print("\t (a) Opening Spreadsheet:", spreadsheet.title)
-    print("\t (a) Opening Worksheet:", worksheet.title)
+    cond = False
+    while cond != True:
+        try :
+            print("Function Level: Upload Data ke SpreadSheet")
+            scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+            credentials = ServiceAccountCredentials.from_json_keyfile_name(credentials_file, scope)
+            gc = gspread.authorize(credentials)
+            spreadsheet = gc.open(gsheets_name)
+            worksheet = spreadsheet.worksheet(worksheet_name)
+            print("\t (a) Opening Spreadsheet:", spreadsheet.title)
+            print("\t (a) Opening Worksheet:", worksheet.title)
 
-    data_values = [list(d.values()) for d in data]
-    try:
-        worksheet.insert_rows(data_values, 2)
-        print("\t (i) Data rows inserted successfully.")
-    except Exception as e:
-        print("\t (e) Error inserting data rows:", str(e))
-    print("\t (i) Data uploaded successfully.")
+            data_values = [list(d.values()) for d in data]
+            try:
+                worksheet.insert_rows(data_values, 2)
+                print("\t (i) Data rows inserted successfully.")
+            except Exception as e:
+                print("\t (e) Error inserting data rows:", str(e))
+            print("\t (i) Data uploaded successfully.")
+            cond = True
+        except:
+            print(f"\t An error occurred: {e}")
 
 if __name__ == "__main__":
     print('Google Maps Scraper oleh Mikael Rizki')
@@ -232,7 +239,7 @@ if __name__ == "__main__":
     # Instalasi Chrome Web Driver dan Load Browser 
     options = webdriver.ChromeOptions()
     options.add_argument("start-maximized")
-    options.add_experimental_option('prefs', {'profile.managed_default_content_settings.images': 2})
+    # options.add_experimental_option('prefs', {'profile.managed_default_content_settings.images': 2})
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     for url in URL: 
@@ -245,19 +252,22 @@ if __name__ == "__main__":
             custom_filter_ulasan()
             scroll_ulasan()
             expand_ulasan()
+            repeat = ""
             data = ambil_ulasan(data_lokasi, COLLECTOR_NAME)
+            upload(data, CREDENTIALS_FILE, GSHEETS_NAME, WORKSHEET_NAME)
+            print("\t (a) Masukkan 'stop' untuk berhenti ambil data!")
+            repeat = input("\t (inp) Masukkan kamu : ")
+            print()
+            while repeat != "stop":
+                expand_ulasan()
+                data = ambil_ulasan(data_lokasi, COLLECTOR_NAME)
+                upload(data, CREDENTIALS_FILE, GSHEETS_NAME, WORKSHEET_NAME)
+                print("\t (a) Masukkan 'stop' untuk berhenti ambil data!")
+                repeat = input("\t (inp) Masukkan kamu : ")
+                print()
         except Exception as e:
             print(f"An error occurred: {e}")
 
-    cond = False
-    while cond != True:
-        try :
-            upload(data, CREDENTIALS_FILE, GSHEETS_NAME, WORKSHEET_NAME)
-            cond = True
-            input("\t (a) Tekan key apapun untuk keluar! ")
-        except:
-            print(f"\t An error occurred: {e}")
-
     # Menutup Chrome Browser
     driver.quit()
-    print()
+    print("Program selesai!\n")
