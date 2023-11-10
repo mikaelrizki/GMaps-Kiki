@@ -92,6 +92,7 @@ def expand_ulasan():
     print("\t (a) Menekan", len(buttons), "option menu 'Read More'!\n")
     for button in buttons:
         button.click()
+        time.sleep(0.4)
 
 def ambil_ulasan(data_lokasi, collector_name):
     '''
