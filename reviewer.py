@@ -30,12 +30,12 @@ def data_lokasi(url):
     print("\t (a) Menekan tombol Ulasan!")
 
     angka_rating = driver.find_element(
-        By.XPATH, "//div[@class='jANrlb']/div[@class='fontDisplayLarge']"
+        By.XPATH, "//div[@class='jANrlb ']/div[@class='fontDisplayLarge']"
     )
     angka_rating = angka_rating.text
     angka_rating = angka_rating.replace(",", ".")
     jumlah_ulasan = driver.find_element(
-        By.XPATH, "//div[@class='jANrlb']/div[@class='fontBodySmall']"
+        By.XPATH, "//div[@class='jANrlb ']/div[@class='fontBodySmall']"
     )
     jumlah_ulasan = jumlah_ulasan.text
     jumlah_ulasan = jumlah_ulasan.replace(" ulasan", "")
