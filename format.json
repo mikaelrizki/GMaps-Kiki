@@ -1,0 +1,57 @@
+{
+  "location": {
+    "id": "1",
+    "name": "Embung Nglanggeran",
+    "rating_value": "4.5",
+    "rating_count": "5501",
+    "url": "https://maps.app.goo.gl/2ERb2pJLvFRKwo1S8",
+    "categories": [
+      "alam",
+      "wisata air",
+      "gunung"
+    ],
+    "reviews": [
+      {
+        "id": "1",
+        "user": {
+          "id": "7123",
+          "name": "SWDzxdD",
+          "info": {
+            "status": "Local Guide",
+            "num_of_reviews": "253",
+            "num_of_photos": "455"
+          }
+        },
+        "info": {
+          "time_visit": "Akhir pekan",
+          "time_queue": "Tanpa mengantre",
+          "reservation": "Tidak"
+        },
+        "review_text": "Golden time sore hari, tiket masuk murah Ada warung buat ngopi dan makan. Durian nya TOP.",
+        "rating_value": "5",
+        "review_time": "2022-12-06"
+      },
+      {
+        "id": "976",
+        "user": {
+          "id": "8849",
+          "name": "AsdSwrD",
+          "info": {
+            "status": "",
+            "num_of_reviews": "38",
+            "num_of_photos": ""
+          }
+        },
+        "info": {
+          "time_visit": "",
+          "time_queue": "",
+          "reservasi": "",
+          "additional": ""
+        },
+        "review_text": "bisa ditempuh pakai motor, tiket murah, cocok sunrise sunset atau malam hari, masukin jadi whistlist ketika di jogja cakep beud pokoknya zheyeng",
+        "rating_value": "5",
+        "review_time": "2022-12-06"
+      }
+    ]
+  }
+}
