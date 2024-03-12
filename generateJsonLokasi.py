@@ -10,3 +10,4 @@ with open("raw/temp.json", "r") as f:
             # Menulis data ke file JSON
             location["num_of_review"]=location["num_of_review"].replace('.', '')
             json.dump(location, file, indent=2)
+ 

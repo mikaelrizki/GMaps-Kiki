@@ -131,19 +131,6 @@
   },
   {
     "id": "11",
-    "name": "Embung Nglanggeran",
-    "rating_value": "",
-    "num_of_review": "",
-    "url": "https://maps.app.goo.gl/Lx8a9JrhrcVHrKjx6",
-    "categories": [
-      "Danau",
-      "Pegunungan",
-      ""
-    ],
-    "reviews": []
-  },
-  {
-    "id": "12",
     "name": "Puncak Gunung Api Purba - Nglanggeran",
     "rating_value": "",
     "num_of_review": "",
@@ -156,7 +143,7 @@
     "reviews": []
   },
   {
-    "id": "13",
+    "id": "12",
     "name": "Gardu Pandang Merapi",
     "rating_value": "",
     "num_of_review": "",
@@ -169,7 +156,7 @@
     "reviews": []
   },
   {
-    "id": "14",
+    "id": "13",
     "name": "Gunung Ireng",
     "rating_value": "",
     "num_of_review": "",
@@ -182,7 +169,7 @@
     "reviews": []
   },
   {
-    "id": "15",
+    "id": "14",
     "name": "Bukit Bintang",
     "rating_value": "",
     "num_of_review": "",
@@ -195,7 +182,7 @@
     "reviews": []
   },
   {
-    "id": "16",
+    "id": "15",
     "name": "Bukit Paralayang Watugupit",
     "rating_value": "",
     "num_of_review": "",
@@ -208,7 +195,7 @@
     "reviews": []
   },
   {
-    "id": "17",
+    "id": "16",
     "name": "Bunker Kaliadem Merapi",
     "rating_value": "",
     "num_of_review": "",
@@ -221,7 +208,7 @@
     "reviews": []
   },
   {
-    "id": "18",
+    "id": "17",
     "name": "Bukit Klangon",
     "rating_value": "",
     "num_of_review": "",
@@ -234,7 +221,7 @@
     "reviews": []
   },
   {
-    "id": "19",
+    "id": "18",
     "name": "Kalikuning Park",
     "rating_value": "",
     "num_of_review": "",
@@ -247,7 +234,7 @@
     "reviews": []
   },
   {
-    "id": "20",
+    "id": "19",
     "name": "Stonehenge Yogyakarta",
     "rating_value": "",
     "num_of_review": "",
@@ -260,7 +247,7 @@
     "reviews": []
   },
   {
-    "id": "21",
+    "id": "20",
     "name": "Wisata Lava Merapi dan Batu Alien",
     "rating_value": "",
     "num_of_review": "",
@@ -273,7 +260,7 @@
     "reviews": []
   },
   {
-    "id": "22",
+    "id": "21",
     "name": "Ekowisata Kali Talang",
     "rating_value": "",
     "num_of_review": "",
@@ -286,7 +273,7 @@
     "reviews": []
   },
   {
-    "id": "23",
+    "id": "22",
     "name": "Blue Lagoon Jogja",
     "rating_value": "",
     "num_of_review": "",
@@ -299,7 +286,7 @@
     "reviews": []
   },
   {
-    "id": "24",
+    "id": "23",
     "name": "Bukit Wisata Pulepayung",
     "rating_value": "",
     "num_of_review": "",
@@ -312,7 +299,7 @@
     "reviews": []
   },
   {
-    "id": "25",
+    "id": "24",
     "name": "Ekowisata Sungai Mudal",
     "rating_value": "",
     "num_of_review": "",
@@ -325,7 +312,7 @@
     "reviews": []
   },
   {
-    "id": "26",
+    "id": "25",
     "name": "DolaNdeso Boro",
     "rating_value": "",
     "num_of_review": "",
@@ -338,7 +325,7 @@
     "reviews": []
   },
   {
-    "id": "27",
+    "id": "26",
     "name": "Kebun Teh Nglinggo",
     "rating_value": "",
     "num_of_review": "",
@@ -351,7 +338,7 @@
     "reviews": []
   },
   {
-    "id": "28",
+    "id": "27",
     "name": "Taman Budaya Kulonprogo",
     "rating_value": "",
     "num_of_review": "",
@@ -364,7 +351,7 @@
     "reviews": []
   },
   {
-    "id": "29",
+    "id": "28",
     "name": "Bukit Panguk Kediwung",
     "rating_value": "",
     "num_of_review": "",
@@ -377,7 +364,7 @@
     "reviews": []
   },
   {
-    "id": "30",
+    "id": "29",
     "name": "Kebun Buah Mangunan",
     "rating_value": "",
     "num_of_review": "",
@@ -390,7 +377,7 @@
     "reviews": []
   },
   {
-    "id": "31",
+    "id": "30",
     "name": "Telaga Jonge",
     "rating_value": "",
     "num_of_review": "",
@@ -403,7 +390,7 @@
     "reviews": []
   },
   {
-    "id": "32",
+    "id": "31",
     "name": "Jomblang Cave",
     "rating_value": "",
     "num_of_review": "",
@@ -416,7 +403,7 @@
     "reviews": []
   },
   {
-    "id": "33",
+    "id": "32",
     "name": "Goa Pindul",
     "rating_value": "",
     "num_of_review": "",
@@ -429,7 +416,7 @@
     "reviews": []
   },
   {
-    "id": "34",
+    "id": "33",
     "name": "Luweng Sampang Waterfalls",
     "rating_value": "",
     "num_of_review": "",
@@ -442,7 +429,7 @@
     "reviews": []
   },
   {
-    "id": "35",
+    "id": "34",
     "name": "Goa Selarong",
     "rating_value": "",
     "num_of_review": "",
@@ -455,7 +442,7 @@
     "reviews": []
   },
   {
-    "id": "36",
+    "id": "35",
     "name": "Plunyon Kalikuning",
     "rating_value": "",
     "num_of_review": "",
@@ -468,7 +455,7 @@
     "reviews": []
   },
   {
-    "id": "37",
+    "id": "36",
     "name": "Candi Sambisari Temple",
     "rating_value": "",
     "num_of_review": "",
@@ -481,7 +468,7 @@
     "reviews": []
   },
   {
-    "id": "38",
+    "id": "37",
     "name": "Candi Gebang",
     "rating_value": "",
     "num_of_review": "",
@@ -494,7 +481,7 @@
     "reviews": []
   },
   {
-    "id": "39",
+    "id": "38",
     "name": "Candi Kalasan",
     "rating_value": "",
     "num_of_review": "",
@@ -507,7 +494,7 @@
     "reviews": []
   },
   {
-    "id": "40",
+    "id": "39",
     "name": "Candi Ijo",
     "rating_value": "",
     "num_of_review": "",
@@ -520,7 +507,7 @@
     "reviews": []
   },
   {
-    "id": "41",
+    "id": "40",
     "name": "Candi Abang",
     "rating_value": "",
     "num_of_review": "",
@@ -533,7 +520,7 @@
     "reviews": []
   },
   {
-    "id": "42",
+    "id": "41",
     "name": "Candi Sari",
     "rating_value": "",
     "num_of_review": "",
@@ -546,7 +533,7 @@
     "reviews": []
   },
   {
-    "id": "43",
+    "id": "42",
     "name": "Candi Sewu",
     "rating_value": "",
     "num_of_review": "",
@@ -559,7 +546,7 @@
     "reviews": []
   },
   {
-    "id": "44",
+    "id": "43",
     "name": "Candi Pawon",
     "rating_value": "",
     "num_of_review": "",
@@ -572,7 +559,7 @@
     "reviews": []
   },
   {
-    "id": "45",
+    "id": "44",
     "name": "Situs Warungboto",
     "rating_value": "",
     "num_of_review": "",
@@ -585,7 +572,7 @@
     "reviews": []
   },
   {
-    "id": "46",
+    "id": "45",
     "name": "Keraton Ngayogyakarta Hadiningrat",
     "rating_value": "",
     "num_of_review": "",
@@ -598,7 +585,7 @@
     "reviews": []
   },
   {
-    "id": "47",
+    "id": "46",
     "name": "Kampung Wisata Taman Sari",
     "rating_value": "",
     "num_of_review": "",
@@ -611,7 +598,7 @@
     "reviews": []
   },
   {
-    "id": "48",
+    "id": "47",
     "name": "Panggung Krapyak",
     "rating_value": "",
     "num_of_review": "",
@@ -624,7 +611,7 @@
     "reviews": []
   },
   {
-    "id": "49",
+    "id": "48",
     "name": "Pura Pakualaman",
     "rating_value": "",
     "num_of_review": "",
@@ -637,7 +624,7 @@
     "reviews": []
   },
   {
-    "id": "50",
+    "id": "49",
     "name": "Gua Maria Sendangsono",
     "rating_value": "",
     "num_of_review": "",
@@ -650,7 +637,7 @@
     "reviews": []
   },
   {
-    "id": "51",
+    "id": "50",
     "name": "Gua Maria Tritis Gunungkidul",
     "rating_value": "",
     "num_of_review": "",
@@ -663,7 +650,7 @@
     "reviews": []
   },
   {
-    "id": "52",
+    "id": "51",
     "name": "Gua Maria Lawangsih",
     "rating_value": "",
     "num_of_review": "",
@@ -676,7 +663,7 @@
     "reviews": []
   },
   {
-    "id": "53",
+    "id": "52",
     "name": "Goa Maria Ratu Perdamaian Sendang Jatiningsih",
     "rating_value": "",
     "num_of_review": "",
@@ -689,7 +676,7 @@
     "reviews": []
   },
   {
-    "id": "54",
+    "id": "53",
     "name": "Klenteng Poncowinatan",
     "rating_value": "",
     "num_of_review": "",
@@ -702,7 +689,7 @@
     "reviews": []
   },
   {
-    "id": "55",
+    "id": "54",
     "name": "Makam Raja-raja Imogiri",
     "rating_value": "",
     "num_of_review": "",
@@ -715,7 +702,7 @@
     "reviews": []
   },
   {
-    "id": "56",
+    "id": "55",
     "name": "Museum Sonobudoyo Unit I",
     "rating_value": "",
     "num_of_review": "",
@@ -728,7 +715,7 @@
     "reviews": []
   },
   {
-    "id": "57",
+    "id": "56",
     "name": "Museum Pendidikan Indonesia",
     "rating_value": "",
     "num_of_review": "",
@@ -741,7 +728,7 @@
     "reviews": []
   },
   {
-    "id": "58",
+    "id": "57",
     "name": "Museum Benteng Vredeburg",
     "rating_value": "",
     "num_of_review": "",
@@ -754,7 +741,7 @@
     "reviews": []
   },
   {
-    "id": "59",
+    "id": "58",
     "name": "Jogja National Museum",
     "rating_value": "",
     "num_of_review": "",
@@ -767,7 +754,7 @@
     "reviews": []
   },
   {
-    "id": "60",
+    "id": "59",
     "name": "Museum Monumen Pangeran Diponegoro Sasana Wiratama",
     "rating_value": "",
     "num_of_review": "",
@@ -780,7 +767,7 @@
     "reviews": []
   },
   {
-    "id": "61",
+    "id": "60",
     "name": "Monggo Chocolate Kingdom Factory Museum Store Kedai & Gelato",
     "rating_value": "",
     "num_of_review": "",
@@ -793,7 +780,7 @@
     "reviews": []
   },
   {
-    "id": "62",
+    "id": "61",
     "name": "Memorial Jenderal Besar HM Soeharto",
     "rating_value": "",
     "num_of_review": "",
@@ -806,7 +793,7 @@
     "reviews": []
   },
   {
-    "id": "63",
+    "id": "62",
     "name": "Museum Sandi",
     "rating_value": "",
     "num_of_review": "",
@@ -819,7 +806,7 @@
     "reviews": []
   },
   {
-    "id": "64",
+    "id": "63",
     "name": "Affandi Museum",
     "rating_value": "",
     "num_of_review": "",
@@ -832,7 +819,7 @@
     "reviews": []
   },
   {
-    "id": "65",
+    "id": "64",
     "name": "Museum Sasmitaloka Panglima Besar Jenderal Sudirman",
     "rating_value": "",
     "num_of_review": "",
@@ -845,7 +832,7 @@
     "reviews": []
   },
   {
-    "id": "66",
+    "id": "65",
     "name": "Ullen Sentalu Museum",
     "rating_value": "",
     "num_of_review": "",
@@ -858,7 +845,7 @@
     "reviews": []
   },
   {
-    "id": "67",
+    "id": "66",
     "name": "Museum TNI AD Dharma Wiratama",
     "rating_value": "",
     "num_of_review": "",
@@ -871,7 +858,7 @@
     "reviews": []
   },
   {
-    "id": "68",
+    "id": "67",
     "name": "Museum Sri Sultan Hamengkubuwono IX",
     "rating_value": "",
     "num_of_review": "",
@@ -884,7 +871,7 @@
     "reviews": []
   },
   {
-    "id": "69",
+    "id": "68",
     "name": "Museum Kars Indonesia",
     "rating_value": "",
     "num_of_review": "",
@@ -897,7 +884,7 @@
     "reviews": []
   },
   {
-    "id": "70",
+    "id": "69",
     "name": "Museum Biologi Fakultas Biologi UGM",
     "rating_value": "",
     "num_of_review": "",
@@ -910,7 +897,7 @@
     "reviews": []
   },
   {
-    "id": "71",
+    "id": "70",
     "name": "Museum Gunungapi Merapi",
     "rating_value": "",
     "num_of_review": "",
@@ -923,7 +910,7 @@
     "reviews": []
   },
   {
-    "id": "72",
+    "id": "71",
     "name": "Museum Pusat TNI AU Dirgantara Mandala",
     "rating_value": "",
     "num_of_review": "",
@@ -936,7 +923,7 @@
     "reviews": []
   },
   {
-    "id": "73",
+    "id": "72",
     "name": "Museum Sejarah Purbakala Pleret",
     "rating_value": "",
     "num_of_review": "",
@@ -949,7 +936,7 @@
     "reviews": []
   },
   {
-    "id": "74",
+    "id": "73",
     "name": "Museum Geoteknologi Mineral",
     "rating_value": "",
     "num_of_review": "",
@@ -962,7 +949,7 @@
     "reviews": []
   },
   {
-    "id": "75",
+    "id": "74",
     "name": "Museum Perjuangan",
     "rating_value": "",
     "num_of_review": "",
@@ -975,7 +962,7 @@
     "reviews": []
   },
   {
-    "id": "76",
+    "id": "75",
     "name": "Museum Gembira Loka Zoo",
     "rating_value": "",
     "num_of_review": "",
@@ -988,7 +975,7 @@
     "reviews": []
   },
   {
-    "id": "77",
+    "id": "76",
     "name": "Diorama Arsip Jogja",
     "rating_value": "",
     "num_of_review": "",
@@ -1001,7 +988,7 @@
     "reviews": []
   },
   {
-    "id": "78",
+    "id": "77",
     "name": "Museum Kereta Keraton",
     "rating_value": "",
     "num_of_review": "",
@@ -1014,7 +1001,7 @@
     "reviews": []
   },
   {
-    "id": "79",
+    "id": "78",
     "name": "Museum Mini Sisa Hartaku",
     "rating_value": "",
     "num_of_review": "",
@@ -1027,7 +1014,7 @@
     "reviews": []
   },
   {
-    "id": "80",
+    "id": "79",
     "name": "Taman Pintar Yogyakarta",
     "rating_value": "",
     "num_of_review": "",
@@ -1040,7 +1027,7 @@
     "reviews": []
   },
   {
-    "id": "81",
+    "id": "80",
     "name": "Taman Pelangi",
     "rating_value": "",
     "num_of_review": "",
@@ -1053,7 +1040,7 @@
     "reviews": []
   },
   {
-    "id": "82",
+    "id": "81",
     "name": "Kids Fun Park",
     "rating_value": "",
     "num_of_review": "",
@@ -1066,7 +1053,7 @@
     "reviews": []
   },
   {
-    "id": "83",
+    "id": "82",
     "name": "Merapi Park",
     "rating_value": "",
     "num_of_review": "",
@@ -1079,7 +1066,7 @@
     "reviews": []
   },
   {
-    "id": "84",
+    "id": "83",
     "name": "Sindu Kusuma Edupark",
     "rating_value": "",
     "num_of_review": "",
@@ -1092,7 +1079,7 @@
     "reviews": []
   },
   {
-    "id": "85",
+    "id": "84",
     "name": "Galaxy Waterpark",
     "rating_value": "",
     "num_of_review": "",
@@ -1105,7 +1092,7 @@
     "reviews": []
   },
   {
-    "id": "86",
+    "id": "85",
     "name": "Waterboom Jogja",
     "rating_value": "",
     "num_of_review": "",
@@ -1118,7 +1105,7 @@
     "reviews": []
   },
   {
-    "id": "87",
+    "id": "86",
     "name": "Grand Puri Water Park",
     "rating_value": "",
     "num_of_review": "",
@@ -1131,7 +1118,7 @@
     "reviews": []
   },
   {
-    "id": "88",
+    "id": "87",
     "name": "HeHa Sky View",
     "rating_value": "",
     "num_of_review": "",
@@ -1144,7 +1131,7 @@
     "reviews": []
   },
   {
-    "id": "89",
+    "id": "88",
     "name": "HeHa Ocean View",
     "rating_value": "",
     "num_of_review": "",
@@ -1157,7 +1144,7 @@
     "reviews": []
   },
   {
-    "id": "90",
+    "id": "89",
     "name": "Obelix Hills",
     "rating_value": "",
     "num_of_review": "",
@@ -1170,7 +1157,7 @@
     "reviews": []
   },
   {
-    "id": "91",
+    "id": "90",
     "name": "Taman Rekreasi Kaliurang",
     "rating_value": "",
     "num_of_review": "",
@@ -1183,7 +1170,7 @@
     "reviews": []
   },
   {
-    "id": "92",
+    "id": "91",
     "name": "Gembira Loka Zoo",
     "rating_value": "",
     "num_of_review": "",
@@ -1196,7 +1183,7 @@
     "reviews": []
   },
   {
-    "id": "93",
+    "id": "92",
     "name": "Ekowisata Sungai Mudal",
     "rating_value": "",
     "num_of_review": "",
@@ -1209,7 +1196,7 @@
     "reviews": []
   },
   {
-    "id": "94",
+    "id": "93",
     "name": "Agro Wisata Bhumi Merapi",
     "rating_value": "",
     "num_of_review": "",
@@ -1222,7 +1209,7 @@
     "reviews": []
   },
   {
-    "id": "95",
+    "id": "94",
     "name": "The Lost World Castle",
     "rating_value": "",
     "num_of_review": "",
@@ -1235,7 +1222,7 @@
     "reviews": []
   },
   {
-    "id": "96",
+    "id": "95",
     "name": "Obelix Village",
     "rating_value": "",
     "num_of_review": "",
@@ -1248,7 +1235,7 @@
     "reviews": []
   },
   {
-    "id": "97",
+    "id": "96",
     "name": "CitraGrand Mutiara Waterpark",
     "rating_value": "",
     "num_of_review": "",
@@ -1261,7 +1248,7 @@
     "reviews": []
   },
   {
-    "id": "98",
+    "id": "97",
     "name": "Gamplong Studio Alam",
     "rating_value": "",
     "num_of_review": "",
@@ -1274,8 +1261,8 @@
     "reviews": []
   },
   {
-    "id": "99",
-    "name": "La Li Sa Farmer"s Village Jogja",
+    "id": "98",
+    "name": "La Li Sa Farmer's Village Jogja",
     "rating_value": "",
     "num_of_review": "",
     "url": "https://maps.app.goo.gl/ETK5dMvEZncQVoAW7",
@@ -1287,7 +1274,7 @@
     "reviews": []
   },
   {
-    "id": "100",
+    "id": "99",
     "name": "Taman Lampion",
     "rating_value": "",
     "num_of_review": "",
@@ -1300,7 +1287,7 @@
     "reviews": []
   },
   {
-    "id": "101",
+    "id": "100",
     "name": "Mini Zoo Jogja Exotarium (pintu utama)",
     "rating_value": "",
     "num_of_review": "",
@@ -1313,7 +1300,7 @@
     "reviews": []
   },
   {
-    "id": "102",
+    "id": "101",
     "name": "Desa Wisata Kelor",
     "rating_value": "",
     "num_of_review": "",
@@ -1326,7 +1313,7 @@
     "reviews": []
   },
   {
-    "id": "103",
+    "id": "102",
     "name": "Gardu Pandang Kaliurang",
     "rating_value": "",
     "num_of_review": "",
@@ -1339,7 +1326,7 @@
     "reviews": []
   },
   {
-    "id": "104",
+    "id": "103",
     "name": "Suraloka Interactive Zoo",
     "rating_value": "",
     "num_of_review": "",
@@ -1352,7 +1339,7 @@
     "reviews": []
   },
   {
-    "id": "105",
+    "id": "104",
     "name": "Kaliurang Park - Botanical Garden",
     "rating_value": "",
     "num_of_review": "",
@@ -1365,7 +1352,7 @@
     "reviews": []
   },
   {
-    "id": "106",
+    "id": "105",
     "name": "Taman Rekreasi Kaliurang",
     "rating_value": "",
     "num_of_review": "",
@@ -1378,7 +1365,7 @@
     "reviews": []
   },
   {
-    "id": "107",
+    "id": "106",
     "name": "Pasar Legi Kotagede",
     "rating_value": "",
     "num_of_review": "",
@@ -1391,7 +1378,7 @@
     "reviews": []
   },
   {
-    "id": "108",
+    "id": "107",
     "name": "Ibarbo Park",
     "rating_value": "",
     "num_of_review": "",
@@ -1404,7 +1391,7 @@
     "reviews": []
   },
   {
-    "id": "109",
+    "id": "108",
     "name": "Pakuwon Mall Jogja",
     "rating_value": "",
     "num_of_review": "",
@@ -1417,7 +1404,7 @@
     "reviews": []
   },
   {
-    "id": "110",
+    "id": "109",
     "name": "Jogja City Mall",
     "rating_value": "",
     "num_of_review": "",
@@ -1430,7 +1417,7 @@
     "reviews": []
   },
   {
-    "id": "111",
+    "id": "110",
     "name": "Galeria Mall - Yogyakarta",
     "rating_value": "",
     "num_of_review": "",
@@ -1443,7 +1430,7 @@
     "reviews": []
   },
   {
-    "id": "112",
+    "id": "111",
     "name": "Malioboro Mall",
     "rating_value": "",
     "num_of_review": "",
@@ -1456,7 +1443,7 @@
     "reviews": []
   },
   {
-    "id": "113",
+    "id": "112",
     "name": "Plaza Malioboro",
     "rating_value": "",
     "num_of_review": "",
@@ -1469,7 +1456,7 @@
     "reviews": []
   },
   {
-    "id": "114",
+    "id": "113",
     "name": "LIPPO PLAZA side Lobby",
     "rating_value": "",
     "num_of_review": "",
@@ -1482,7 +1469,7 @@
     "reviews": []
   },
   {
-    "id": "115",
+    "id": "114",
     "name": "Sleman City Hall",
     "rating_value": "",
     "num_of_review": "",
@@ -1495,7 +1482,7 @@
     "reviews": []
   },
   {
-    "id": "116",
+    "id": "115",
     "name": "Hamzah Batik - Pusat Oleh-oleh Jogja Batik, Kerajinan dan Camilan",
     "rating_value": "",
     "num_of_review": "",
@@ -1508,7 +1495,7 @@
     "reviews": []
   },
   {
-    "id": "117",
+    "id": "116",
     "name": "Hamzah Batik Kaliurang",
     "rating_value": "",
     "num_of_review": "",
@@ -1521,7 +1508,7 @@
     "reviews": []
   },
   {
-    "id": "118",
+    "id": "117",
     "name": "Pasar Lempuyangan",
     "rating_value": "",
     "num_of_review": "",
@@ -1534,7 +1521,7 @@
     "reviews": []
   },
   {
-    "id": "119",
+    "id": "118",
     "name": "Pasar Beringharjo Yogyakarta",
     "rating_value": "",
     "num_of_review": "",
@@ -1547,7 +1534,7 @@
     "reviews": []
   },
   {
-    "id": "120",
+    "id": "119",
     "name": "Pasar Kranggan",
     "rating_value": "",
     "num_of_review": "",
@@ -1560,7 +1547,7 @@
     "reviews": []
   },
   {
-    "id": "121",
+    "id": "120",
     "name": "Pasar Ngasem",
     "rating_value": "",
     "num_of_review": "",
@@ -1573,7 +1560,7 @@
     "reviews": []
   },
   {
-    "id": "122",
+    "id": "121",
     "name": "Taman Budaya Yogyakarta",
     "rating_value": "",
     "num_of_review": "",
@@ -1586,7 +1573,7 @@
     "reviews": []
   },
   {
-    "id": "123",
+    "id": "122",
     "name": "Titik Nol Yogyakarta",
     "rating_value": "",
     "num_of_review": "",
@@ -1599,7 +1586,7 @@
     "reviews": []
   },
   {
-    "id": "124",
+    "id": "123",
     "name": "Malioboro Yogyakarta",
     "rating_value": "",
     "num_of_review": "",
@@ -1612,7 +1599,7 @@
     "reviews": []
   },
   {
-    "id": "125",
+    "id": "124",
     "name": "Tugu Jogja",
     "rating_value": "",
     "num_of_review": "",
@@ -1625,7 +1612,7 @@
     "reviews": []
   },
   {
-    "id": "126",
+    "id": "125",
     "name": "Alun-Alun Kidul Yogyakarta",
     "rating_value": "",
     "num_of_review": "",
@@ -1638,7 +1625,7 @@
     "reviews": []
   },
   {
-    "id": "127",
+    "id": "126",
     "name": "Monumen Serangan Umum 1 Maret 1949",
     "rating_value": "",
     "num_of_review": "",
@@ -1651,7 +1638,7 @@
     "reviews": []
   },
   {
-    "id": "128",
+    "id": "127",
     "name": "Tugu Pensil",
     "rating_value": "",
     "num_of_review": "",
@@ -1664,7 +1651,7 @@
     "reviews": []
   },
   {
-    "id": "129",
+    "id": "128",
     "name": "Tlogo Putri Kaliurang",
     "rating_value": "",
     "num_of_review": "",
@@ -1677,7 +1664,7 @@
     "reviews": []
   },
   {
-    "id": "130",
+    "id": "129",
     "name": "Pantai Baron",
     "rating_value": "",
     "num_of_review": "",
@@ -1690,7 +1677,7 @@
     "reviews": []
   },
   {
-    "id": "131",
+    "id": "130",
     "name": "Pantai Baru",
     "rating_value": "",
     "num_of_review": "",
@@ -1703,7 +1690,7 @@
     "reviews": []
   },
   {
-    "id": "132",
+    "id": "131",
     "name": "Pantai Bidara",
     "rating_value": "",
     "num_of_review": "",
@@ -1716,7 +1703,7 @@
     "reviews": []
   },
   {
-    "id": "133",
+    "id": "132",
     "name": "Pantai Bugel",
     "rating_value": "",
     "num_of_review": "",
@@ -1729,7 +1716,7 @@
     "reviews": []
   },
   {
-    "id": "134",
+    "id": "133",
     "name": "Pantai Cangkring",
     "rating_value": "",
     "num_of_review": "",
@@ -1742,7 +1729,7 @@
     "reviews": []
   },
   {
-    "id": "135",
+    "id": "134",
     "name": "Pantai Cemara Sewu",
     "rating_value": "",
     "num_of_review": "",
@@ -1755,7 +1742,7 @@
     "reviews": []
   },
   {
-    "id": "136",
+    "id": "135",
     "name": "Pantai Congot",
     "rating_value": "",
     "num_of_review": "",
@@ -1768,7 +1755,7 @@
     "reviews": []
   },
   {
-    "id": "137",
+    "id": "136",
     "name": "Pantai Depok",
     "rating_value": "",
     "num_of_review": "",
@@ -1781,7 +1768,7 @@
     "reviews": []
   },
   {
-    "id": "138",
+    "id": "137",
     "name": "Pantai Drini",
     "rating_value": "",
     "num_of_review": "",
@@ -1794,7 +1781,7 @@
     "reviews": []
   },
   {
-    "id": "139",
+    "id": "138",
     "name": "Pantai Gesing",
     "rating_value": "",
     "num_of_review": "",
@@ -1807,7 +1794,7 @@
     "reviews": []
   },
   {
-    "id": "140",
+    "id": "139",
     "name": "Pantai Glagah Indah",
     "rating_value": "",
     "num_of_review": "",
@@ -1820,7 +1807,7 @@
     "reviews": []
   },
   {
-    "id": "141",
+    "id": "140",
     "name": "Pantai Goa Cemara",
     "rating_value": "",
     "num_of_review": "",
@@ -1833,7 +1820,7 @@
     "reviews": []
   },
   {
-    "id": "142",
+    "id": "141",
     "name": "Pantai Indrayanti",
     "rating_value": "",
     "num_of_review": "",
@@ -1846,7 +1833,7 @@
     "reviews": []
   },
   {
-    "id": "143",
+    "id": "142",
     "name": "Pantai Jogan",
     "rating_value": "",
     "num_of_review": "",
@@ -1859,7 +1846,7 @@
     "reviews": []
   },
   {
-    "id": "144",
+    "id": "143",
     "name": "Pantai Jungwok",
     "rating_value": "",
     "num_of_review": "",
@@ -1872,7 +1859,7 @@
     "reviews": []
   },
   {
-    "id": "145",
+    "id": "144",
     "name": "Pantai Kesirat",
     "rating_value": "",
     "num_of_review": "",
@@ -1885,7 +1872,7 @@
     "reviews": []
   },
   {
-    "id": "146",
+    "id": "145",
     "name": "Pantai Krakal",
     "rating_value": "",
     "num_of_review": "",
@@ -1898,7 +1885,7 @@
     "reviews": []
   },
   {
-    "id": "147",
+    "id": "146",
     "name": "Pantai Kukup",
     "rating_value": "",
     "num_of_review": "",
@@ -1911,7 +1898,7 @@
     "reviews": []
   },
   {
-    "id": "148",
+    "id": "147",
     "name": "Pantai Kuwaru",
     "rating_value": "",
     "num_of_review": "",
@@ -1924,7 +1911,7 @@
     "reviews": []
   },
   {
-    "id": "149",
+    "id": "148",
     "name": "Pantai Midodaren",
     "rating_value": "",
     "num_of_review": "",
@@ -1937,7 +1924,7 @@
     "reviews": []
   },
   {
-    "id": "150",
+    "id": "149",
     "name": "Pantai Mlarangan Asri",
     "rating_value": "",
     "num_of_review": "",
@@ -1950,7 +1937,7 @@
     "reviews": []
   },
   {
-    "id": "151",
+    "id": "150",
     "name": "Pantai Ngandong",
     "rating_value": "",
     "num_of_review": "",
@@ -1963,7 +1950,7 @@
     "reviews": []
   },
   {
-    "id": "152",
+    "id": "151",
     "name": "Pantai Ngedan",
     "rating_value": "",
     "num_of_review": "",
@@ -1976,7 +1963,7 @@
     "reviews": []
   },
   {
-    "id": "153",
+    "id": "152",
     "name": "Pantai Ngetun",
     "rating_value": "",
     "num_of_review": "",
@@ -1989,7 +1976,7 @@
     "reviews": []
   },
   {
-    "id": "154",
+    "id": "153",
     "name": "Pantai Nglambor",
     "rating_value": "",
     "num_of_review": "",
@@ -2002,7 +1989,7 @@
     "reviews": []
   },
   {
-    "id": "155",
+    "id": "154",
     "name": "Pantai Nglolang",
     "rating_value": "",
     "num_of_review": "",
@@ -2015,7 +2002,7 @@
     "reviews": []
   },
   {
-    "id": "156",
+    "id": "155",
     "name": "Pantai Ngobaran",
     "rating_value": "",
     "num_of_review": "",
@@ -2028,7 +2015,7 @@
     "reviews": []
   },
   {
-    "id": "157",
+    "id": "156",
     "name": "Pantai Ngrenehan",
     "rating_value": "",
     "num_of_review": "",
@@ -2041,7 +2028,7 @@
     "reviews": []
   },
   {
-    "id": "158",
+    "id": "157",
     "name": "Pantai Ngrumput",
     "rating_value": "",
     "num_of_review": "",
@@ -2054,7 +2041,7 @@
     "reviews": []
   },
   {
-    "id": "159",
+    "id": "158",
     "name": "Pantai Nguyahan",
     "rating_value": "",
     "num_of_review": "",
@@ -2067,7 +2054,7 @@
     "reviews": []
   },
   {
-    "id": "160",
+    "id": "159",
     "name": "Pantai Pandansari",
     "rating_value": "",
     "num_of_review": "",
@@ -2080,7 +2067,7 @@
     "reviews": []
   },
   {
-    "id": "161",
+    "id": "160",
     "name": "Pantai Pandansimo",
     "rating_value": "",
     "num_of_review": "",
@@ -2093,7 +2080,7 @@
     "reviews": []
   },
   {
-    "id": "162",
+    "id": "161",
     "name": "Pantai Parang Endog",
     "rating_value": "",
     "num_of_review": "",
@@ -2106,7 +2093,7 @@
     "reviews": []
   },
   {
-    "id": "163",
+    "id": "162",
     "name": "Pantai Parangkusumo",
     "rating_value": "",
     "num_of_review": "",
@@ -2119,7 +2106,7 @@
     "reviews": []
   },
   {
-    "id": "164",
+    "id": "163",
     "name": "Pantai Parangtritis",
     "rating_value": "",
     "num_of_review": "",
@@ -2132,7 +2119,7 @@
     "reviews": []
   },
   {
-    "id": "165",
+    "id": "164",
     "name": "Pantai Pasir Kadilangu",
     "rating_value": "",
     "num_of_review": "",
@@ -2145,7 +2132,7 @@
     "reviews": []
   },
   {
-    "id": "166",
+    "id": "165",
     "name": "Pantai Pelangi",
     "rating_value": "",
     "num_of_review": "",
@@ -2158,7 +2145,7 @@
     "reviews": []
   },
   {
-    "id": "167",
+    "id": "166",
     "name": "Pantai Pengklik",
     "rating_value": "",
     "num_of_review": "",
@@ -2171,7 +2158,7 @@
     "reviews": []
   },
   {
-    "id": "168",
+    "id": "167",
     "name": "Pantai Pok Tunggal",
     "rating_value": "",
     "num_of_review": "",
@@ -2184,7 +2171,7 @@
     "reviews": []
   },
   {
-    "id": "169",
+    "id": "168",
     "name": "Pantai Pulang Sawal",
     "rating_value": "",
     "num_of_review": "",
@@ -2197,7 +2184,7 @@
     "reviews": []
   },
   {
-    "id": "170",
+    "id": "169",
     "name": "Pantai Sadeng",
     "rating_value": "",
     "num_of_review": "",
@@ -2210,7 +2197,7 @@
     "reviews": []
   },
   {
-    "id": "171",
+    "id": "170",
     "name": "Pantai Sadranan",
     "rating_value": "",
     "num_of_review": "",
@@ -2223,7 +2210,7 @@
     "reviews": []
   },
   {
-    "id": "172",
+    "id": "171",
     "name": "Pantai Samas",
     "rating_value": "",
     "num_of_review": "",
@@ -2236,7 +2223,7 @@
     "reviews": []
   },
   {
-    "id": "173",
+    "id": "172",
     "name": "Pantai Sarangan Gunungkidul",
     "rating_value": "",
     "num_of_review": "",
@@ -2249,7 +2236,7 @@
     "reviews": []
   },
   {
-    "id": "174",
+    "id": "173",
     "name": "Pantai Sepanjang",
     "rating_value": "",
     "num_of_review": "",
@@ -2262,7 +2249,7 @@
     "reviews": []
   },
   {
-    "id": "175",
+    "id": "174",
     "name": "Pantai Seruni",
     "rating_value": "",
     "num_of_review": "",
@@ -2275,7 +2262,7 @@
     "reviews": []
   },
   {
-    "id": "176",
+    "id": "175",
     "name": "Pantai Siung",
     "rating_value": "",
     "num_of_review": "",
@@ -2288,7 +2275,7 @@
     "reviews": []
   },
   {
-    "id": "177",
+    "id": "176",
     "name": "Pantai Slili",
     "rating_value": "",
     "num_of_review": "",
@@ -2301,7 +2288,7 @@
     "reviews": []
   },
   {
-    "id": "178",
+    "id": "177",
     "name": "Pantai Timang",
     "rating_value": "",
     "num_of_review": "",
@@ -2314,7 +2301,7 @@
     "reviews": []
   },
   {
-    "id": "179",
+    "id": "178",
     "name": "Pantai Trisik",
     "rating_value": "",
     "num_of_review": "",
@@ -2327,7 +2314,7 @@
     "reviews": []
   },
   {
-    "id": "180",
+    "id": "179",
     "name": "Pantai Watu Kodok",
     "rating_value": "",
     "num_of_review": "",
@@ -2340,7 +2327,7 @@
     "reviews": []
   },
   {
-    "id": "181",
+    "id": "180",
     "name": "Pantai Watu Lumbung",
     "rating_value": "",
     "num_of_review": "",
@@ -2353,7 +2340,7 @@
     "reviews": []
   },
   {
-    "id": "182",
+    "id": "181",
     "name": "Pantai Watulawang",
     "rating_value": "",
     "num_of_review": "",
@@ -2366,7 +2353,7 @@
     "reviews": []
   },
   {
-    "id": "183",
+    "id": "182",
     "name": "Pantai Wediombo",
     "rating_value": "",
     "num_of_review": "",
@@ -2379,7 +2366,7 @@
     "reviews": []
   },
   {
-    "id": "184",
+    "id": "183",
     "name": "Pantai Wohkudu",
     "rating_value": "",
     "num_of_review": "",
