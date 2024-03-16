@@ -116,7 +116,7 @@ time_taken = end_time - start_time
 print(f'Time taken : {time_taken.__round__(2)} seconds\n')
 
 # Print the total sentiment of each category
-print("Total Sentiment Positif \t: ", lstOfSentiment.count("Positif"))
-print("Total Sentiment Negatif \t: ", lstOfSentiment.count("Negatif"))
+print("Total Sentiment Positif\t: ", lstOfSentiment.count("Positif"))
+print("Total Sentiment Negatif\t: ", lstOfSentiment.count("Negatif"))
 print("Total Sentiment Netral \t: ", lstOfSentiment.count("Netral"))
 print("Total Sentiment #ASKME \t: ", lstOfSentiment.count("#ASKME"))
