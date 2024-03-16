@@ -22,6 +22,7 @@ def analyze_sentiment(review):
             reviewDemoji = demoji.replace_with_desc(review, ":")
         # Truncate or split the review if it exceeds the maximum length
         max_length = pipe[i].model.config.max_position_embeddings
+        time.sleep(0.5)
         if len(reviewDemoji) > max_length:
             review_chunks = [reviewDemoji[i:i + max_length] for i in range(0, len(reviewDemoji), max_length)]
             # Analyze sentiment for each chunk and aggregate the results
@@ -77,7 +78,7 @@ lstOfSentiment = list()
 
 # Make a query to get the reviews that have not been labeled
 cursor = mydb.cursor()
-query = "SELECT * FROM reviews WHERE review_text != '' AND (sentiment_1 is null OR sentiment_2 is null OR sentiment_3 is null ) ORDER BY id DESC LIMIT 100"
+query = "SELECT * FROM reviews WHERE review_text != '' AND (sentiment_1 is null OR sentiment_2 is null OR sentiment_3 is null ) ORDER BY id DESC LIMIT 10"
 cursor.execute(query)
 reviews = cursor.fetchall()
 
@@ -91,10 +92,7 @@ for review in reviews:
     textRev = demoji.replace_with_desc(review[5], ":")
     sentiment1, sentiment2, sentiment3, sentimentResult = analyze_sentiment(plainText)
     query = "UPDATE reviews SET sentiment_1=%s, sentiment_2=%s, sentiment_3=%s, sentiment_result='"+str(sentimentResult)+"' WHERE id='"+str(review[0])+"'"
-    val1 = "Positif" if sentiment1 == "positive" else "Negatif" if sentiment1 == "negative" else "Netral"
-    val2 = "Positif" if sentiment2 == "Positive" else "Negatif" if sentiment2 == "Negative" else "Netral"
-    val3 = "Positif" if sentiment3 == "positive" else "Negatif" if sentiment3 == "negative" else "Netral"
-    values = (val1, val2, val3)
+    values = ("Positif" if sentiment1 == "positive" else "Negatif" if sentiment1 == "negative" else "Netral", "Positif" if sentiment2 == "Positive" else "Negatif" if sentiment2 == "Negative" else "Netral", "Positif" if sentiment3 == "positive" else "Negatif" if sentiment3 == "negative" else "Netral")
     cursor.execute(query, values)
 
     lstOfSentiment.append(sentimentResult)
