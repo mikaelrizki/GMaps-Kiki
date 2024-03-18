@@ -15,26 +15,34 @@ pipe = [
 # Define a function to analyze the sentiment of a review
 def analyze_sentiment(review):
     final_result = list()
-    for i in range(3):
-        if i == 2:
-            reviewDemoji = demoji.replace_with_desc(review, "")
-        else:
-            reviewDemoji = demoji.replace_with_desc(review, ":")
-        # Truncate or split the review if it exceeds the maximum length
-        max_length = pipe[i].model.config.max_position_embeddings
-        time.sleep(0.5)
-        if len(reviewDemoji) > max_length:
-            review_chunks = [reviewDemoji[i:i + max_length] for i in range(0, len(reviewDemoji), max_length)]
-            # Analyze sentiment for each chunk and aggregate the results
-            sentiments = [pipe[i](chunk)[0]["label"] for chunk in review_chunks]
-            # For simplicity, you can take the most frequent sentiment as the overall sentiment
-            # Alternatively, you can devise your own method to aggregate sentiments from chunks
-            sentiment_counts = {label: sentiments.count(label) for label in set(sentiments)}
-            final_result.append(max(sentiment_counts, key=sentiment_counts.get))
-        else:
-            # If the review is within the length limit, analyze sentiment directly
-            result = pipe[i](reviewDemoji)
-            final_result.append(result[0]["label"])
+    try:
+        for i in range(3):
+            if i == 2:
+                reviewDemoji = demoji.replace_with_desc(review, "")
+            else:
+                reviewDemoji = demoji.replace_with_desc(review, ":")
+            # Truncate or split the review if it exceeds the maximum length
+            max_length = pipe[i].model.config.max_position_embeddings
+            time.sleep(0.3)
+            if len(reviewDemoji) > max_length:
+                review_chunks = [reviewDemoji[i:i + max_length] for i in range(0, len(reviewDemoji), max_length)]
+                # Print the length of the chunks for debugging
+                # print([len(chunk) for chunk in review_chunks])
+
+                # Analyze sentiment for each chunk and aggregate the results
+                sentiments = [pipe[i](chunk)[0]["label"] for chunk in review_chunks]
+                # For simplicity, you can take the most frequent sentiment as the overall sentiment
+                # Alternatively, you can devise your own method to aggregate sentiments from chunks
+                sentiment_counts = {label: sentiments.count(label) for label in set(sentiments)}
+                final_result.append(max(sentiment_counts, key=sentiment_counts.get))
+            else:
+                # If the review is within the length limit, analyze sentiment directly
+                result = pipe[i](reviewDemoji)
+                final_result.append(result[0]["label"])
+    except Exception as e:
+        print("ERROR", str(e))
+        final_result.append("Error")
+
     x, y, z = final_result[0], final_result[1], final_result[2]
     if x == "positive" and y == "Positive" and z == "positive":
         summary_result = "Positif"
@@ -60,6 +68,8 @@ def analyze_sentiment(review):
         summary_result = "Netral"
     elif x != "neutral" and y == "Neutral" and z == "neutral":
         summary_result = "Netral"
+    elif x == "Error" and y == "Error" and z == "Error":
+        summary_result = "Error"
     else:
         summary_result = "#ASKME"
     return x, y, z, summary_result
@@ -92,7 +102,7 @@ for review in reviews:
     textRev = demoji.replace_with_desc(review[5], ":")
     sentiment1, sentiment2, sentiment3, sentimentResult = analyze_sentiment(plainText)
     query = "UPDATE reviews SET sentiment_1=%s, sentiment_2=%s, sentiment_3=%s, sentiment_result='"+str(sentimentResult)+"' WHERE id='"+str(review[0])+"'"
-    values = ("Positif" if sentiment1 == "positive" else "Negatif" if sentiment1 == "negative" else "Netral", "Positif" if sentiment2 == "Positive" else "Negatif" if sentiment2 == "Negative" else "Netral", "Positif" if sentiment3 == "positive" else "Negatif" if sentiment3 == "negative" else "Netral")
+    values = ("Positif" if sentiment1 == "positive" else "Negatif" if sentiment1 == "negative" else "Netral" if sentiment1 == "neutral" else "Error", "Positif" if sentiment2 == "Positive" else "Negatif" if sentiment2 == "Negative" else "Netral" if sentiment2 == "Neutral" else "Error", "Positif" if sentiment3 == "positive" else "Negatif" if sentiment3 == "negative" else "Netral" if sentiment3 == "neutral" else "Error")
     cursor.execute(query, values)
 
     lstOfSentiment.append(sentimentResult)
@@ -120,3 +130,4 @@ print("Total Sentiment Positif\t: ", lstOfSentiment.count("Positif"))
 print("Total Sentiment Negatif\t: ", lstOfSentiment.count("Negatif"))
 print("Total Sentiment Netral \t: ", lstOfSentiment.count("Netral"))
 print("Total Sentiment #ASKME \t: ", lstOfSentiment.count("#ASKME"))
+print("Total Sentiment Error \t: ", lstOfSentiment.count("Error"))
